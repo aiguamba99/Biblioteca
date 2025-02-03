@@ -22,4 +22,6 @@ public class Controlador {
     public void getLoggin() {
         loggin.setVisible(true);
     }
+    
 }
+
