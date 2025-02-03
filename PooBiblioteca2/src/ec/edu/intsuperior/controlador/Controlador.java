@@ -50,6 +50,7 @@ public class Controlador {
     public void getLoggin() {
         Loggin loggin = new Loggin(this);
         loggin.setVisible(true);
+   
     }
 }
 
