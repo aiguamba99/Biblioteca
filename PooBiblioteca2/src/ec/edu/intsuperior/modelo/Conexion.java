@@ -7,17 +7,18 @@ import java.sql.SQLException;
 public class Conexion {
 
     private Connection con;
-    private String url = "jdbc:mysql://localhost:3306/biblioteca?serverTimezone=UTC"; // Cambia "cine" por "biblioteca"
-    private String user = "root"; // Usuario de MySQL
-    private String password = "root"; // Contraseña de MySQL
+    private String url = "jdbc:mysql://localhost:3306/biblioteca?serverTimezone=UTC";
+    private String user = "root"; // Cambia esto por tu usuario de MySQL
+    private String password = "root"; // Cambia esto por tu contraseña de MySQL
+
+    // Constructor por defecto
+    public Conexion() {
+    }
 
     // Método para establecer la conexión
     public Connection conectar() {
         try {
-            // Cargar el driver de MySQL
             Class.forName("com.mysql.cj.jdbc.Driver");
-            
-            // Establecer la conexión
             con = DriverManager.getConnection(url, user, password);
             System.out.println("Conexión exitosa a la base de datos.");
         } catch (ClassNotFoundException e) {
